@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Guessing Game</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+}
+
+.container{
+    width:350px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+h1{
+    color:#2575fc;
+    margin-bottom:15px;
+}
+
+p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    font-size:18px;
+    border:2px solid #2575fc;
+    border-radius:8px;
+    outline:none;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    font-size:18px;
+    background:#2575fc;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1b5fd9;
+}
+
+#message{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#attempts{
+    margin-top:10px;
+    color:#333;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>🎯 Number Guessing Game</h1>
+
+    <p>Guess the secret number between <b>1 and 100</b></p>
+
+    <input type="number" id="guess" placeholder="Enter your guess">
+
+    <button onclick="checkGuess()">Check Guess</button>
+
+    <p id="message"></p>
+    <p id="attempts"></p>
+</div>
+
+<script>
+
+// Fixed secret number
+let secretNumber = 25;
+let count = 0;
+
+function checkGuess(){
+
+    let guess = Number(document.getElementById("guess").value);
+    let message = document.getElementById("message");
+    let attempts = document.getElementById("attempts");
+
+    count++;
+
+    if(guess == secretNumber){
+        message.innerHTML = "🎉 Congratulations! You guessed the correct number.";
+        message.style.color = "green";
+    }
+    else if(guess < secretNumber){
+        message.innerHTML = "📉 Too Low! Try Again.";
+        message.style.color = "red";
+    }
+    else if(guess > secretNumber){
+        message.innerHTML = "📈 Too High! Try Again.";
+        message.style.color = "red";
+    }
+    else{
+        message.innerHTML = "⚠ Please enter a valid number.";
+        message.style.color = "orange";
+    }
+
+    attempts.innerHTML = "Number of Attempts: " + count;
+}
+
+</script>
+
+</body>
+</html>

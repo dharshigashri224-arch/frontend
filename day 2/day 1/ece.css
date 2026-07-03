@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+}
+
+h1,h2{
+    color: #003366;
+}
+
+hr{
+    border: 1px solid #003366;
+}
+
+p{
+    font-size: 18px;
+    text-align: justify;
+}
+
+img{
+    border: 2px solid #003366;
+}
+
+table{
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th{
+    background-color: #003366;
+    color: white;
+}
+
+th,td{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+a{
+    color: #003366;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
