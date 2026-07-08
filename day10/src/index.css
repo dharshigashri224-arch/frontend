@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===========================
+   ROOT COLORS
+=========================== */
+
+:root{
+
+    --primary:#7A1F3D;
+    --secondary:#D4AF37;
+    --background:#FDF8F3;
+    --white:#ffffff;
+    --black:#222222;
+    --gray:#777777;
+    --light:#f6f6f6;
+
+}
+
+/* ===========================
+   HTML
+=========================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--background);
+
+    color:var(--black);
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   ROOT
+=========================== */
+
+#root{
+
+    width:100%;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+h1,
+h2,
+h3,
+h4{
+
+    font-family:'Playfair Display',serif;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   PARAGRAPH
+=========================== */
+
+p{
+
+    line-height:1.7;
+
+    color:var(--gray);
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+input{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+/* ===========================
+   LIST
+=========================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#5e1730;
+
+}
+
+/* ===========================
+   TEXT SELECTION
+=========================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+
+    padding:80px 0;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+body{
+
+font-size:14px;
+
+}
+
+section{
+
+padding:60px 0;
+
+}
+
+.container{
+
+width:95%;
+
+}
+
+}
